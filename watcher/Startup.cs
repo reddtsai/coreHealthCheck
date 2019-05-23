@@ -27,7 +27,7 @@ namespace watcher
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseHealthChecksUI();
+            app.UseHealthChecksUI(config => config.UIPath = "hc-ui");
             // if (env.IsDevelopment())
             // {
             //     app.UseDeveloperExceptionPage();

@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.HealthChecks.UI" Version="2.2.27" />
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
 </Project>
