@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using HealthChecks.UI.Client;
 
 namespace beats
 {
@@ -23,8 +18,8 @@ namespace beats
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHealthChecks()
-                .AddSqlServer(connectionString: _config["Data:ConnectionStrings:Sample"]);
+            services.RegisterHealthChecks(_config);
+                  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
